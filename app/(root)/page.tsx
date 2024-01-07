@@ -28,9 +28,9 @@ export default async function Home() {
           <div className="flex flex-col justify-center gap-8">
             <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1>
             <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
-            <Button variant="easy" size="lg" asChild className="button w-full sm:w-fit">
+            <Button variant="premium" size="lg" asChild className="w-full sm:w-fit">
               <Link href="#events">
-                Explore Now
+                <p>Explore Now</p>
               </Link>
             </Button>
           </div>
