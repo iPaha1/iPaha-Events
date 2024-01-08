@@ -29,7 +29,7 @@ import { Separator } from "../separator"
             <Image 
               src={"/assets/images/logo1.svg"}
               alt="logo"
-              width={30}
+              width={50}
               height={38}
             />
             <Separator className="border border-gray-50" />

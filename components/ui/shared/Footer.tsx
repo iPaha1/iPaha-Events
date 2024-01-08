@@ -9,7 +9,7 @@ const Footer = () => {
           <Image 
             src="/assets/images/logo1.svg"
             alt="logo"
-            width={10}
+            width={50}
             height={28}
           />
         </Link>

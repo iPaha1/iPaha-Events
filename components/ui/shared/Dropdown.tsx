@@ -60,13 +60,13 @@ import { createCategory, getAllCategories } from "@/lib/actions/category.actions
         </SelectTrigger>
         <SelectContent>
           {categories.length > 0 && categories.map((category) => (
-            <SelectItem key={category._id} value={category._id} className="select-item p-regular-14">
+            <SelectItem key={category._id} value={category._id} className="select-item p-regular-14 bg-zinc-200">
               {category.name}
             </SelectItem>
           ))}
   
           <AlertDialog>
-            <AlertDialogTrigger className="p-medium-14 flex w-full rounded-sm py-3 pl-8 text-orange-600 hover:bg-primary-50 focus:text-orange-600">Add new category</AlertDialogTrigger>
+            {/* <AlertDialogTrigger className="p-medium-14 flex w-full rounded-sm py-3 pl-8 text-orange-600 hover:bg-primary-50 focus:text-orange-600">Add new category</AlertDialogTrigger> */}
             <AlertDialogContent className="bg-white">
               <AlertDialogHeader>
                 <AlertDialogTitle>New Category</AlertDialogTitle>

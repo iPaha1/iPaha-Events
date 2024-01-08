@@ -107,6 +107,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
   }
 
   return (
+    <div className="bg-slate-200" >
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-5">
         <div className="flex flex-col gap-5 md:flex-row">
@@ -283,7 +284,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                                 <Checkbox
                                   onCheckedChange={field.onChange}
                                   checked={field.value}
-                                id="isFree" className="mr-2 h-5 w-5 border-2 border-orange-600" />
+                                id="isFree" className="mr-2 h-5 w-5 border-2 border-green-500" />
                               </div>
           
                             </FormControl>
@@ -335,6 +336,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
           ): `${type} Event `}</Button>
       </form>
     </Form>
+    </div>
   )
 }
 
