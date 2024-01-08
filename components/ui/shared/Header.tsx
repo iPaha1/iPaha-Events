@@ -14,7 +14,7 @@ const Header = () => {
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-36">
           <Image 
-            src="/assets/images/logo1.svg" width={128} height={38}
+            src="/assets/images/logo1.svg" width={50} height={38}
             alt="iPaha logo" 
           />
         </Link>
@@ -31,7 +31,7 @@ const Header = () => {
             <MobileNav />
           </SignedIn>
           <SignedOut>
-            <Button variant="premium" asChild size="lg">
+            <Button variant="easy" asChild size="lg">
               <Link href="/sign-in">
                 Login
               </Link>
