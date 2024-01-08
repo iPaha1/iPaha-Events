@@ -2,24 +2,25 @@
 // import Collection from '@/components/shared/Collection'
 // import Search from '@/components/shared/Search';
 import { Button } from '@/components/ui/button'
-// import { getAllEvents } from '@/lib/actions/event.actions';
-// import { SearchParamProps } from '@/types';
+import CategoryFilter from '@/components/ui/shared/CategoryFilter';
+import Collection from '@/components/ui/shared/Collection';
+import Search from '@/components/ui/shared/Search';
+import { getAllEvents } from '@/lib/actions/event.actions';
+import { SearchParamProps } from '@/types';
 import Image from 'next/image'
 import Link from 'next/link'
 
-// { searchParams }: SearchParamProps
+export default async function Home({ searchParams }: SearchParamProps) {
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || '';
+  const category = (searchParams?.category as string) || '';
 
-export default async function Home() {
-  // const page = Number(searchParams?.page) || 1;
-  // const searchText = (searchParams?.query as string) || '';
-  // const category = (searchParams?.category as string) || '';
-
-  {/* const events = await getAllEvents({
+  const events = await getAllEvents({
     query: searchText,
     category,
     page,
     limit: 6
-  }) */}
+  })
 
   return (
     <>
@@ -28,9 +29,9 @@ export default async function Home() {
           <div className="flex flex-col justify-center gap-8">
             <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1>
             <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
-            <Button variant="easy" size="lg" asChild className="w-full sm:w-fit">
+            <Button variant="easy" size="lg" asChild className=" w-full sm:w-fit">
               <Link href="#events">
-                <p>Explore Now</p>
+                Explore Now
               </Link>
             </Button>
           </div>
@@ -48,12 +49,12 @@ export default async function Home() {
       <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold">Trust by <br /> Thousands of Events</h2>
 
-        {/* <div className="flex w-full flex-col gap-5 md:flex-row">
+        <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
           <CategoryFilter />
-        </div> */}
+        </div>
 
-        {/* <Collection 
+        <Collection 
           data={events?.data}
           emptyTitle="No Events Found"
           emptyStateSubtext="Come back later"
@@ -61,7 +62,7 @@ export default async function Home() {
           limit={6}
           page={page}
           totalPages={events?.totalPages}
-        /> */}
+        />
       </section>
     </>
   )
